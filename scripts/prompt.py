@@ -27,7 +27,7 @@ def prompt():
             You will given a description of the object to be recycled/trashed and classify whether or not the item can be placed to trash or recycling.
             If the item has a clear label, utilize your knowledge base to decide whether or not that product is recyclable
             If the item does not have a cleaar label (ie. candy wrapper, glass bottle, newspaper, etc.), make an educated guess as to what category the item is in.
-            Once you have completed your classification, write true if the item is recyclable, false otherwise
+            Once you have completed your classification, write True if the item is recyclable, False if the item is not recycleable
             """),
             few_shot_prompt,
             ("human", "{input}"),
@@ -36,7 +36,10 @@ def prompt():
     return final_prompt
 
 
+"""
 
 chain = prompt() | ChatOpenAI(temperature=0, model="gpt-3.5-turbo")
 
-print(chain.invoke({"input": """yerba mate can"""}).content)
+print(chain.invoke({"input": """"""}).content)
+
+"""
