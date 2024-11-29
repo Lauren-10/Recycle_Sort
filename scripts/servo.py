@@ -19,6 +19,7 @@ def set_servo_angle(angle):
     time.sleep(0.1)  # Small delay for stability
 
 
+"""
 
 # Example usage:
 set_servo_angle(0)  # Rotate to 0 degrees
@@ -28,6 +29,18 @@ time.sleep(1)
 set_servo_angle(180) # Rotate to 180 degrees
 time.sleep(1)
 
+"""
+
+def recycle_rotation():
+    set_servo_angle(90)
+    time.sleep(5)
+    set_servo_angle(270)
+
+def trash_rotation():
+    set_servo_angle(270)
+    time.sleep(5)
+    set_servo_angle(90)
+    
 # Clean up GPIO
 
 pwm.stop()
